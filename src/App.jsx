@@ -18,6 +18,8 @@ import PrivacyPolicy from './Component/PrivacyPolicy';
 import Terms from './Component/Terms&condition';
 import Support from './Component/Support';
 import FAQ from './Component/FAQ';
+import Image from './Component/Content';
+
 
 function App() {
 
@@ -42,6 +44,7 @@ useEffect(() => {
   <>
       <Home/>
       <Swiperslide />
+      <Image/>
       </>
   } />
 
