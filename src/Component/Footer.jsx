@@ -1,6 +1,7 @@
 import React from 'react'
 import { Facebook, Twitter, Linkedin, Instagram, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/Gemini_Generated_Image_k4vff5k4vff5k4vf.png'
 
 export const Footer = () => {
 
@@ -12,16 +13,16 @@ const handleNewsletterSubmit = (e) => {
   };
 
   return (
-   <footer className="backdrop-blur-lg bg-white/10 border-t border-white/20 bg-gradient-to-br from-black to-cyan-900 text-white text-center">
+   <footer className=" relative backdrop-blur-lg bg-white/10 border-t border-white/20 bg-gradient-to-br from-black to-cyan-900 text-white text-center">
       
 
       <div className="container mx-auto px-6 py-16" data-aos="fade-up" data-aos-delay="100">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           
 
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center">
             <h3 className="text-2xl font-bold text-white">
-             <img alt='LOGO'></img>
+             <img alt='cybredge' src={logo} className=" w-30 h-20 object-cover "></img>
                 Cybredge Pvt Ltd
             </h3>
             <p className="text-sm text-gray-400 leading-relaxed">
@@ -30,16 +31,16 @@ We want to build a world where brands communicate clearly, create emotional reso
 
             </p>
             <div className="flex space-x-4 pt-2 justify-center">
-              <button type="button" aria-label="Facebook" className="hover:text-white transition-colors duration-300">
+              <button type="button" onClick={()=> window.open("/")} aria-label="Facebook" className="hover:text-white transition-colors duration-300">
                 <Facebook size={20} />
               </button>
-              <button type="button" aria-label="Twitter" className="hover:text-white transition-colors duration-300">
+              <button type="button" onClick={()=> window.open("")} aria-label="Twitter" className="hover:text-white transition-colors duration-300">
                 <Twitter size={20} />
               </button>
               <button type="button" aria-label="LinkedIn" className="hover:text-white transition-colors duration-300">
                 <Linkedin size={20} />
               </button>
-              <button type="button" aria-label="Instagram" className="hover:text-white transition-colors duration-300">
+              <button type="button" aria-label="Instagram" onClick={()=> window.open("https://www.instagram.com/cybredgeprivatelimited?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", "_blank")}  className="hover:text-white transition-colors duration-300">
                 <Instagram size={20} />
               </button>
             </div>

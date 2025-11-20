@@ -13,11 +13,11 @@ import Portfolio from './Component/Portfolio';
 import Team from './Component/Team';
 import Blog from './Component/Blog';
 import Contact from './Component/Contact';  
-import Dropdown  from './Component/Dropdown';
 import PrivacyPolicy from './Component/PrivacyPolicy';
 import Terms from './Component/Terms&condition';
 import Support from './Component/Support';
 import FAQ from './Component/FAQ';
+import Watermark from '../src/assets/Gemini_Generated_Image_k4vff5k4vff5k4vf.png'
 
 
 function App() {
@@ -35,7 +35,18 @@ useEffect(() => {
     <Router>
       <ScrollToTop />
       <Navbar/>
-
+{/* Global Watermark Background */}
+      <img
+        src={Watermark}
+        alt="watermark"
+        className="
+          fixed inset-0 m-auto 
+          opacity-50 
+          w-100 h-100
+          -z-100
+          pointer-events-none 
+          select-none
+        "/>
        <Routes>
 {/*home page*/}
 
@@ -61,7 +72,6 @@ useEffect(() => {
   <Route path='/team' element={<Team/>} />
   <Route path='/blog' element={<Blog/>} />
   <Route path='/contact' element={<Contact/>} />
-  <Route path='/dropdown' element={<Dropdown/>} />
   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
   <Route path="/terms" element={<Terms />} />
   <Route path="/support" element={<Support />} />
