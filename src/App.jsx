@@ -43,6 +43,12 @@ useEffect(() => {
   <>
       <Home/>
       <Swiperslide />
+      <About/>
+      <Services/>
+      <Portfolio/>
+      <Blog/>
+      <Team/>
+      <Contact/>  
 
       </>
   } />
